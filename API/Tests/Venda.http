@@ -1,0 +1,29 @@
+### Listar vendas
+POST https://localhost:5001/api/venda/create
+Content-Type: application/json
+
+{
+    "pagamento": "Cartão de Crédito",
+    "itens": [
+        {
+            "itemVendaId": 1,
+            "produtoId": 2,
+            "quantidade": 1,
+            "preco": 3,
+            "carrinhoId": "931fdea3-55e2-4f88-abf0-f33c1a76c4c8"
+        }
+    ],
+    "cliente": "thaina"
+}
+
+###
+GET https://localhost:5001/api/venda/list
+
+{
+  "itemVendaId": 1,
+  "produtoId": 1,
+  "quantidade": 1,
+  "preco": 3.5,
+  "carrinhoId": "931fdea3-55e2-4f88-abf0-f33c1a76c4c8",
+  "criadoEm": "2021-11-29T21:33:39.2937821-03:00"
+}

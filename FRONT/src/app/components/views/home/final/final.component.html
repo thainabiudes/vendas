@@ -1,0 +1,27 @@
+<br />
+
+<h1>Finalização de compra</h1>
+
+<br />
+
+<mat-form-field appearance="fill">
+    <mat-label>Forma de pagamento</mat-label>
+    <mat-select (selectionChange)="atualizar($event)" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let pagamento of array" [value]="pagamento">
+            {{ pagamento.formaDePagamento }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<br />
+<br />
+<mat-form-field>
+    <mat-label>Nome do cliente:</mat-label>
+    <input type="text" name="usuario" [(ngModel)]="usuario" matInput />
+</mat-form-field>
+
+<br />
+<br />
+<button mat-stroked-button color="primary" (click)="create()">Finalizar</button>
+<br />
+<br />
